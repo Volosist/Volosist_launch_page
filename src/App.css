@@ -1,0 +1,349 @@
+/* Header with Logo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(10, 30, 58, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 12px;
+}
+
+.header-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0A1E3A;
+    letter-spacing: -0.5px;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 100px auto 60px;
+    padding: 0 30px;
+}
+
+/* Intro Section */
+.intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(10, 30, 58, 0.1);
+}
+
+.main-headline {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #0A1E3A;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #275EE9;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgba(234, 192, 53, 0.3);
+    z-index: -1;
+}
+
+.sub-headline {
+    font-size: 1.3rem;
+    color: #5d7dd9;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Core Message */
+.core-message {
+    margin-bottom: 60px;
+}
+
+.core-message h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0A1E3A;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.core-message h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background: #EAC035;
+    border-radius: 2px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: rgba(10, 30, 58, 0.8);
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* Services Section */
+.services-section {
+    margin-bottom: 60px;
+}
+
+.services-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #275EE9;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.service-item {
+    background: rgba(39, 94, 233, 0.05);
+    border: 1px solid rgba(39, 94, 233, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #275EE9;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    background: rgba(39, 94, 233, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 94, 233, 0.1);
+}
+
+.services-note {
+    font-size: 1rem;
+    color: rgba(10, 30, 58, 0.7);
+    line-height: 1.7;
+    font-style: italic;
+    border-left: 3px solid #EAC035;
+    padding-left: 20px;
+    margin-top: 25px;
+}
+
+/* Countdown Section */
+.countdown-section {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+    background: rgba(10, 30, 58, 0.02);
+    border-radius: 20px;
+    border: 1px solid rgba(10, 30, 58, 0.05);
+}
+
+.countdown-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #275EE9;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.time-unit {
+    background: white;
+    border: 1px solid rgba(39, 94, 233, 0.2);
+    border-radius: 12px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(10, 30, 58, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.time-unit:hover {
+    transform: translateY(-5px);
+    border-color: #275EE9;
+}
+
+.time-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #EAC035;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.time-label {
+    font-size: 0.85rem;
+    color: #5d7dd9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.launch-date {
+    font-size: 1.2rem;
+    color: #0A1E3A;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 1px solid rgba(10, 30, 58, 0.1);
+}
+
+.mission-statement {
+    font-size: 1.3rem;
+    color: #0A1E3A;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-statement strong {
+    color: #275EE9;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.website {
+    font-size: 1.8rem;
+    color: #EAC035;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #275EE9;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 1px solid rgba(39, 94, 233, 0.3);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    background: rgba(39, 94, 233, 0.05);
+    border-color: #275EE9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        height: 60px;
+    }
+    
+    .container {
+        margin: 80px auto 40px;
+        padding: 0 20px;
+    }
+    
+    .main-headline {
+        font-size: 2.5rem;
+    }
+    
+    .core-message h2 {
+        font-size: 1.8rem;
+    }
+    
+    #countdown-timer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .time-unit {
+        padding: 20px 10px;
+    }
+    
+    .time-value {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 15px;
+    }
+    
+    .header-text {
+        font-size: 1.3rem;
+    }
+    
+    .main-headline {
+        font-size: 2rem;
+    }
+    
+    .sub-headline {
+        font-size: 1.1rem;
+    }
+    
+    #countdown-timer {
+        grid-template-columns: 1fr;
+        max-width: 250px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .website {
+        font-size: 1.5rem;
+    }
+}
